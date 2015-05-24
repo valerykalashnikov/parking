@@ -1,0 +1,13 @@
+<h1>Your vehicle</h1>
+
+<p>Your vehicle licence plate is <span><%= @vehicle.licence_plate %></span></p>
+<p>Your space is <span><%= @vehicle.space.number %></span></p>
+<p>Your level is <span><%= @vehicle.space.level.mark %></span></p>
+
+<div style="margin-top:10px;">
+  <%= link_to "Leave", vehicle_path(@vehicle), method: :delete %>
+</div>
+
+<div style="margin-top:10px;">
+  <%= link_to "Redirect to root", root_path %>
+</div>
