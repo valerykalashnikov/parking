@@ -6,11 +6,12 @@ class VehiclesController < ApplicationController
   end
 
   def create
-    redirect_to :back, flash: { errors: 'There are no vacant spaces' } and return unless @parking_space
-    vehicle = @parking_space.build_vehicle licence_plate: vehicle_params[:licence_plate]
-    redirect_to :back, flash: { errors: vehicle.errors.full_messages.first } and return unless vehicle.valid?
-    @parking_space.save!
-    redirect_to vehicle_path(vehicle.licence_plate)
+    create_vehicle_form = CreateVehicleForm.new(@parking_space, vehicle_params[:licence_plate])
+    create_vehicle_form.save
+    unless create_vehicle_form.valid?
+      redirect_to :back, flash: { errors: create_vehicle_form.errors.full_messages.first } and return
+    end
+    redirect_to vehicle_path(create_vehicle_form.vehicle.licence_plate)
   end
 
   def destroy
