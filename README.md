@@ -11,6 +11,8 @@ Empty space for vehicle is possible by find the vehicle, clicking for necessary 
 * How to run:
 ```
   bundle install
+  rake db:create
+  rake db:migrate
   rake db:populate # to populate db with fake data
   rails s
 ```
