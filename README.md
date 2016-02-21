@@ -1,8 +1,6 @@
-== README
+This rails application emulates parking with flexible amount of parking levels and  parking spaces for motorbikes and cars.
 
-This rails application emulates parking with flexible levels amount and flexible parking spaces for motobikes and cars.
-
-Empty space for vehicle is possible by find the vehicle, clicking for necessary link for details and click 'Leave'.
+To free space for vehicle click the necessary link to view details and press 'Leave'
 
 * Ruby version: 2.1.1
 
@@ -17,6 +15,6 @@ Empty space for vehicle is possible by find the vehicle, clicking for necessary 
   rails s
 ```
 
-* Database: uses usual sqlite - keeping it simple
+* Database: sqlite
 
 * How to run the test suite: run ```rspec```
