@@ -18,3 +18,5 @@ To free space for vehicle click the necessary link to view details and press 'Le
 * Database: sqlite
 
 * How to run the test suite: run ```rspec```
+
+
